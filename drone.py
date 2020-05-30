@@ -257,7 +257,7 @@ def graph(name): #shows a graph of some pid values when pid is turned off. runs 
 
 def read_controller(name): #reads the vals and buttons from the controller, setting them as global values (goes to drone) or ena/disabling features like pid
     global arduino, throttle, roll, pitch, yaw, ena_pid_vertical, ena_pid_h, ena_pid_xy, stopped, launch_land
-    stopped = False #is execution halted because of crash avoidance (trigger button)
+    stopped = False #is execution halted because of emergency stop (trigger button)
     while not stopped:
         events = get_gamepad() #get the events array from the joystick
 
